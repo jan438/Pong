@@ -51,7 +51,12 @@ class PongGame(Widget):
             self.player2.center_y += 10
         elif keycode[1] == 'down':
             self.player2.center_y -= 10
+        elif keycode[1] == 'm':
+            self.make_ai_move()
         return True
+        
+    def make_ai_move(self):
+        print("Make ai move")
 
     def serve_ball(self, vel=(4, 0)):
         self.ball.center = self.center
